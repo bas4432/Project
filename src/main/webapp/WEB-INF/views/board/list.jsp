@@ -39,7 +39,7 @@
 						<tr>
 							<th style="width: 30px">#</th>
 							<th>제목</th>
-							<th style="width: 100px">작성자</th>
+							<th style="width: 100px">글쓴이</th>
 							<th style="width: 150px">작성시간</th>
 							<th style="width: 60px">조회</th>
 						</tr>
