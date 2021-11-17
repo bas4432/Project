@@ -16,10 +16,17 @@
 <link rel="stylesheet" href="${path}/plugins/fontawesome-free/css/all.min.css"> <!-- Theme style --> 
 <link rel="stylesheet" href="${path}/dist/css/adminlte.min.css"> <!-- Google Font: Source Sans Pro --> 
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<script>
+$(".writeBtn").on("click", function() {
+	console.log("테스트");
+	self.location = "${path}/board/write"
+});
+</script>
 
 
 
@@ -57,9 +64,10 @@
 			</div>
 			<div class="card-footer">
 				<div class="float-right">
-					<button type="button" class="btn btn-success btn-flat"
+					<button type="button" class="btn btn-success btn-flat writeBtn"
 						id="writeBtn">
-						<i class="fa fa-pencil"></i> 글쓰기
+						<a href="/board/write"><i class="fa fa-pencil">글쓰기</i></a>
+						
 					</button>
 				</div>
 			</div>

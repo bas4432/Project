@@ -95,6 +95,7 @@ public class BoardController {
     	logger.info("modifyPOST ..."); 
     	boardService.update(boardVO); 
     	redirectAttributes.addFlashAttribute("msg", "modSuccess"); 
+    	
     	return "redirect:/board/list"; 
     	}
     

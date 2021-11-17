@@ -14,7 +14,7 @@ public class BoardDAOImpl implements BoardDAO {
 
 	private static final String NAMESPACE = "com.mycompany.myweb.mappers.article.boardMapper";
 	
-	//단 이때 주의해야 할 점이 있다면 ArticleDAOImpl 클래스의 NAMESPACE 변수에 정의된 String값과 mapper 파일의 namespace 값은 일치
+	//단 이때 주의해야 할 점이 있다면 BoardDAOImpl 클래스의 NAMESPACE 변수에 정의된 String값과 mapper 파일의 namespace 값은 일치
 
 
 	private final SqlSession sqlSession;

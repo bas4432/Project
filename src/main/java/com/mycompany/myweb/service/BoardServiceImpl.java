@@ -38,7 +38,7 @@ public class BoardServiceImpl implements BoardService{
 		
 		System.out.println("업데이트");
 		boardDAO.update(boardVO);
-		
+		//쿼리문 실행
 	}
 
 	@Override

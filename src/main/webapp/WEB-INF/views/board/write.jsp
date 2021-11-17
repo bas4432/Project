@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="${path}/plugins/fontawesome-free/css/all.min.css"> <!-- Theme style --> 
 <link rel="stylesheet" href="${path}/dist/css/adminlte.min.css"> <!-- Google Font: Source Sans Pro --> 
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 <meta charset="EUC-KR">
@@ -34,6 +35,7 @@ else if (result == "delSuccess") {
 </script>
 <script>
 $(".listBtn").on("click", function() {
+	console.log("테스트");
 	self.location = "${path}/board/list"
 });
 
@@ -64,7 +66,7 @@ $(".listBtn").on("click", function() {
 					</div>
 				</div>
 				<div class="card-footer">
-					<button type="button" class="btn btn-primary">
+					<button type="button" class="btn btn-primary listBtn">
 						<i class="fa fa-list"></i> 목록
 					</button>
 					<div class="float-right">
