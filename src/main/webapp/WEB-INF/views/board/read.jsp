@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> 
@@ -44,7 +43,7 @@
 	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header">
-				<h3 class="card-title">臂力格 : ${board.title}</h3>
+				<h3 class="card-title">旮�鞝滊 : ${board.title}</h3>
 			</div>
 			<div class="card-body" style="height: 700px">
 				${board.content}</div>
@@ -63,14 +62,14 @@
 						value="${board.board_no}">
 				</form>
 				<button type="submit" class="btn btn-primary listBtn">
-					<i class="fa fa-list"></i> 格废
+					<i class="fa fa-list"></i> 氇╇
 				</button>
 				<div class="float-right">
 					<button type="submit" class="btn btn-warning modBtn">
-						<i class="fa fa-edit"></i> 荐沥
+						<i class="fa fa-edit"></i> 靾橃爼
 					</button>
 					<button type="submit" class="btn btn-danger delBtn">
-						<i class="fa fa-trash"></i> 昏力
+						<i class="fa fa-trash"></i> 靷牅
 					</button>
 				</div>
 			</div>

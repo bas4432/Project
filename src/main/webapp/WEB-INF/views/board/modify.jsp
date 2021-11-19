@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> 
@@ -38,40 +37,39 @@ $(document).ready(function () {
 </head>
 <body>
 	<div class="col-lg-12">
-		<form role="form" id="writeForm" method="post"
-			action="${path}/board/modify">
+		<form role="form" id="writeForm" method="post" action="${path}/board/modify">
 			<div class="card">
 				<div class="card-header">
-					<h3 class="card-title">°Ô½Ã±Û ÀÛ¼º</h3>
+					<h3 class="card-title">ê²Œì‹œê¸€ ì‘ì„±</h3>
 				</div>
 				<div class="card-body">
 					<input type="hidden" name="board_no"
 						value="${board.board_no}">
 					<div class="form-group">
-						<label for="title">Á¦¸ñ</label> <input class="form-control"
-							id="title" name="title" placeholder="Á¦¸ñÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä"
+						<label for="title">ì œëª©</label> <input class="form-control"
+							id="title" name="title" placeholder="ì œëª©ì„ ì…ë ¥í•´ì£¼ì„¸ìš”"
 							value="${board.title}">
 					</div>
 					<div class="form-group">
-						<label for="content">³»¿ë</label>
+						<label for="content">ë‚´ìš©</label>
 						<textarea class="form-control" id="content" name="content"
-							rows="30" placeholder="³»¿ëÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä" style="resize: none;">${board.content}</textarea>
+							rows="30" placeholder="ë‚´ìš©ì„ ì…ë ¥í•´ì£¼ì„¸ìš”" style="resize: none;">${board.content}</textarea>
 					</div>
 					<div class="form-group">
-						<label for="writer">ÀÛ¼ºÀÚ</label> <input class="form-control"
+						<label for="writer">ì‘ì„±ì</label> <input class="form-control"
 							id="writer" name="writer" value="${board.writer}" readonly>
 					</div>
 				</div>
 				<div class="card-footer">
 					<button type="button" class="btn btn-primary">
-						<i class="fa fa-list"></i> ¸ñ·Ï
+						<i class="fa fa-list"></i> ëª©ë¡
 					</button>
 					<div class="float-right">
 						<button type="button" class="btn btn-warning cancelBtn">
-							<i class="fa fa-trash"></i> Ãë¼Ò
+							<i class="fa fa-trash"></i> ì·¨ì†Œ
 						</button>
 						<button type="submit" class="btn btn-success modBtn">
-							<i class="fa fa-save"></i> ¼öÁ¤ ÀúÀå
+							<i class="fa fa-save"></i> ìˆ˜ì • ì €ì¥
 						</button>
 					</div>
 				</div>

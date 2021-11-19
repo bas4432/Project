@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> 
@@ -22,10 +21,20 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <script>
-$(".writeBtn").on("click", function() {
-	console.log("�׽�Ʈ");
-	self.location = "${path}/board/write"
+
+
+$(document).ready(function() {
+	$(".writeBtn").on("click", function() {
+		console.log("테스트");
+		self.location = "${path}/board/write"
+	});	
+	
+	
 });
+
+
+//즉, 문서 객체가 모두 로드된 다음에 실행될 코드들을 $(document).ready(function(){}) 안에 기술해줘야 합니다.
+
 </script>
 
 
@@ -38,17 +47,17 @@ $(".writeBtn").on("click", function() {
 	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header">
-				<h3 class="card-title">�Խñ� ���</h3>
+				<h3 class="card-title">게시글 목록</h3>
 			</div>
 			<div class="card-body">
 				<table class="table table-bordered">
 					<tbody>
 						<tr>
 							<th style="width: 30px">#</th>
-							<th>����</th>
-							<th style="width: 100px">�۾���</th>
-							<th style="width: 150px">�ۼ��ð�</th>
-							<th style="width: 60px">��ȸ</th>
+							<th>제목</th>
+							<th style="width: 100px">글쓴이</th>
+							<th style="width: 150px">작성시간</th>
+							<th style="width: 60px">조회</th>
 						</tr>
 						<c:forEach items="${boards}" var="board">
 							<tr>
@@ -66,7 +75,7 @@ $(".writeBtn").on("click", function() {
 				<div class="float-right">
 					<button type="button" class="btn btn-success btn-flat writeBtn"
 						id="writeBtn">
-						<a href="/board/write"><i class="fa fa-pencil">�۾���</i></a>
+						<i class="fa fa-pencil">글쓰기</i></a>
 						
 					</button>
 				</div>

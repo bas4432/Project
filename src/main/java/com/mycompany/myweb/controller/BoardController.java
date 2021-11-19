@@ -97,16 +97,16 @@ public class BoardController {
     	redirectAttributes.addFlashAttribute("msg", "modSuccess"); 
     	
     	return "redirect:/board/list"; 
-    	}
+    }
     
- //삭제 처리
+   //삭제 처리
     @RequestMapping(value = "/remove", method = RequestMethod.POST) 
     public String remove(@RequestParam("board_no") int board_no, RedirectAttributes redirectAttributes) throws Exception { 
     	    logger.info("remove ..."); 
     		boardService.delete(board_no); 
     		redirectAttributes.addFlashAttribute("msg", "delSuccess"); 
     		return "redirect:/board/list"; 
-    		}
+    }
 
 
 

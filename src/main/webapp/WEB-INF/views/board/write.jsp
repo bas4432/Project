@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> 
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
@@ -21,60 +23,77 @@
 var result = "${msg}"; 
 
 if (result == "regSuccess") { 
-	alert("°Ô½Ã±Û µî·ÏÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù."); 
+	alert("ê²Œì‹œê¸€ ë“±ë¡ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."); 
 	} 
 else if (result == "modSuccess") { 
-	alert("°Ô½Ã±Û ¼öÁ¤ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù."); 
+	alert("ê²Œì‹œê¸€ ìˆ˜ì •ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."); 
 } 
 else if (result == "delSuccess") { 
-		alert("°Ô½Ã±Û »èÁ¦°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù."); 
+		alert("ê²Œì‹œê¸€ ì‚­ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."); 
 }
 
 
+ $(document).ready(function() {
 
-</script>
-<script>
 $(".listBtn").on("click", function() {
-	console.log("Å×½ºÆ®");
 	self.location = "${path}/board/list"
 });
 
+});
+ 
+function check(){
+	
+	if(f.title.value ==""){
+		alert("ì œëª©ì„ ì…ë ¥í•˜ì„¸ìš”");
+		f.title.focus();
+		return false;
+	}else if(f.content.value==""){
+		alert("ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”");
+		f.content.focus();
+		return false;
+		
+	}else{
+		return true;
+	}
+	
+}
 </script>
+
+
 
 </head>
 <body>
 
 	<div class="col-lg-12">
-		<form role="form" id="writeForm" method="post" action="${path}/board/write">
+		<form role="form" id="writeForm" method="post" action="${path}/board/write" onsubmit="return check()" name="f">
 			<div class="card">
 				<div class="card-header with-border">
-					<h3 class="card-title">°Ô½Ã±Û ÀÛ¼º</h3>
+					<h3 class="card-title">ê²Œì‹œê¸€ ì‘ì„±</h3>
 				</div>
 				<div class="card-body">
 					<div class="form-group">
-						<label for="title">Á¦¸ñ</label> <input class="form-control"
-							id="title" name="title" placeholder="Á¦¸ñÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä">
+						<label for="title">ì œëª©</label> <input class="form-control" id="title" name="title" placeholder="ì œëª©ì„ ì…ë ¥í•´ì£¼ì„¸ìš”">
 					</div>
 					<div class="form-group">
-						<label for="content">³»¿ë</label>
+						<label for="content">ë‚´ìš©</label>
 						<textarea class="form-control" id="content" name="content"
-							rows="30" placeholder="³»¿ëÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä" style="resize: none;"></textarea>
+							rows="30" placeholder="ë‚´ìš©ì„ ì…ë ¥í•´ì£¼ì„¸ìš”" style="resize: none;"></textarea>
 					</div>
 					<div class="form-group">
-						<label for="writer">ÀÛ¼ºÀÚ</label> <input class="form-control"
+						<label for="writer">ì‘ì„±ì</label> <input class="form-control"
 							id="writer" name="writer">
 					</div>
 				</div>
 				<div class="card-footer">
 					<button type="button" class="btn btn-primary listBtn">
-						<i class="fa fa-list"></i> ¸ñ·Ï
+						<i class="fa fa-list"></i> ëª©ë¡
 					</button>
 					<div class="float-right">
-						<button type="reset" class="btn btn-warning">
-							<i class="fa fa-reply"></i> ÃÊ±âÈ­
-						</button>
+						<!-- <button type="reset" class="btn btn-warning">
+							<i class="fa fa-reply"></i> ì´ˆê¸°í™”
+						</button> -->
 						<button type="submit" class="btn btn-success">
-							<i class="fa fa-save"></i> ÀúÀå
+							<i class="fa fa-save"></i> ì €ì¥
 						</button>
 					</div>
 				</div>
@@ -84,4 +103,5 @@ $(".listBtn").on("click", function() {
 
 	
 </body>
+
 </html>
